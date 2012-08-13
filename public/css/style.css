@@ -350,7 +350,7 @@ body {
 }
 
 #controls {
-    color: #aeacaa;
+    color: #737270;
     background: -moz-linear-gradient(top, #2c2824, #3a3530);
     background: -o-linear-gradient(top, #2c2824, #3a3530);
     background: -webkit-linear-gradient(top, #2c2824, #3a3530);
@@ -383,8 +383,13 @@ body {
     text-shadow: 0 1px 0 #4f4b46
 }
 
-#controls i:hover {
-    color: #ebebea
+#controls i:hover, {
+    color: #ebebea;
+}
+
+#controls i.active {
+    color: #fafaf7;
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 
 /**

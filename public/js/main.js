@@ -80,16 +80,21 @@ var Timer = {
 
 $(document).ready(function() {
 	$('#play').click(function() {
-		Timer.start();
+        $('#controls i').removeClass('active');
+        $(this).addClass('active');
+        Timer.start();
 		return false;
 	});
 
 	$('#pause').click(function() {
+        $('#controls i').removeClass('active');
+        $(this).addClass('active');
 		Timer.pause();
 		return false;
 	});
 
 	$('#stop').click(function() {
+                     $('#controls i').removeClass('active');
 		Timer.stop();
 		return false;
 	});
