@@ -302,14 +302,23 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 
 .icon-user-md:before              { content: "\f200"; }
 
-
-
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Droid Sans'), local('DroidSans'), url(../font/droidsans.woff) format('woff');
+}
+@font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(../font/droidsansbold.woff) format('woff');
+}
 
 body {
     font-family: "Droid Sans", Helvetica, sans-serif;
     color: #444;
-    background: #f1f1f1;
+    background: #2c2824;
     margin: 0;
     padding: 0
 }
@@ -326,12 +335,11 @@ body {
     float: left;
     width: 97px;
     text-align: center;
-    background: -moz-linear-gradient(left, #fdfdfd, #f4f4f4);
-    background: -o-linear-gradient(left, #fdfdfd, #f4f4f4);
-    background: -webkit-linear-gradient(left, #fdfdfd, #f4f4f4);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fdfdfd), color-stop(1, #f4f4f4));
-    filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#fdfdfd, EndColorStr=#f4f4f4)";
-    background: linear-gradient(left, #fdfdfd, #f4f4f4);
+    background: -moz-linear-gradient(left, #fefefe, #f3f3f3);
+    background: -o-linear-gradient(left, #fefefe, #f3f3f3);
+    background: -webkit-linear-gradient(left, #fefefe, #f3f3f3);
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#fefefe, EndColorStr=#f4f4f4)";
+    background: linear-gradient(left, #fefefe, #f3f3f3);
     border-right: 1px solid #e1e1e1;
     font-size: 12px;
     padding: 12px 0;
@@ -351,13 +359,12 @@ body {
 
 #controls {
     color: #737270;
-    background: -moz-linear-gradient(top, #2c2824, #3a3530);
-    background: -o-linear-gradient(top, #2c2824, #3a3530);
-    background: -webkit-linear-gradient(top, #2c2824, #3a3530);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2c2824), color-stop(1, #3a3530));
+    background: -moz-linear-gradient(top, #211e1b, #2c2824);
+    background: -o-linear-gradient(top, #211e1b, #2c2824);
+    background: -webkit-linear-gradient(top, #211e1b, #2c2824);
     filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#2c2824, EndColorStr=#3a3530)";
-    background: linear-gradient(top, #2c2824, #3a3530);
-    border-top: 1px solid #23201d
+    background: linear-gradient(top, #211e1b, #2c2824);
+    border-top: 1px solid #1a1715
 }
 
 #controls ul {
@@ -371,7 +378,7 @@ body {
     display: block;
     width: 97px;
     text-align: center;
-    border-right: 1px solid #2c2824
+    border-right: 1px solid #211e1b;
 }
 
 #controls i {
@@ -380,7 +387,12 @@ body {
     width: 97px;
     text-align: center;
     cursor: pointer;
-    text-shadow: 0 1px 0 #4f4b46
+    text-shadow: 0 1px 0 #111;
+}
+
+#controls i.disabled {
+    cursor: default;
+    color: #403f3e;
 }
 
 #controls i:hover, {
